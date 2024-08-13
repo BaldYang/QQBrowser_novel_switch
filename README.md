@@ -1,5 +1,6 @@
 # QQ浏览器小说文本转换器
 「QQ浏览器小说文本转换器」正式发布！
+
 ## 使用说明
 更新时间：*`2024/08/13`*  
 作者：*`Mr. Measure`*
@@ -36,3 +37,11 @@
 包含作者邮箱及社交账号。
 ##### (6)分享软件下载链接
 ##### (7)关于
+
+## 演示视频
+[bilibili](https://b23.tv/Fnk0t2M)  
+[微博](https://weibo.com/7024676243/5066860492227558)  
+[QQ短视频(小世界)](https://s.xsj.qq.com/mbz1GT30)  
+[X(Twitter)](https://x.com/yangchen1991113/status/1823195014048227705)  
+[YouTube](https://youtu.be/xjlEcboVquk)  
+[TikTok](https://www.tiktok.com/@baldyc2024/video/7402460246192557355)
