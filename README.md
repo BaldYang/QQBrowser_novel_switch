@@ -39,7 +39,7 @@
 ## 演示视频v1.1.0
 [bilibili](https://b23.tv/LVDC4Id)  
 [微博](https://weibo.com/7024676243/5098954812821004)  
-[QQ短视频(小世界)](https://s.xsj.qq.com/QYublrCg)  
+[QQ短视频(小世界)](https://s.xsj.qq.com/EeqDCqil)  
 [X(Twitter)](https://x.com/yangchen1991113/status/1855287886784143507)  
 [YouTube](https://youtu.be/_rzc8GUVTlU)  
 [TikTok](https://www.tiktok.com/@baldyc2024/video/7435320457194114350)
