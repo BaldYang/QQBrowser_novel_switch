@@ -8,165 +8,520 @@
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-        gtag('config', 'G-ESKB5XCZQQ',{ 'debug_mode':true });
+        gtag('config', 'G-ESKB5XCZQQ');
     </script>
-    
+
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2991666358335790"
-     crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="QQ浏览器小说文本转换器 v2.0.0：提取、转换、合并、分享 QQ 浏览器已下载小说。">
     <title>QQ浏览器小说文本转换器</title>
+
     <style>
+        :root {
+            --bg: #f4f7fb;
+            --card: #ffffff;
+            --text: #1f2937;
+            --muted: #64748b;
+            --accent: #2563eb;
+            --accent-dark: #1d4ed8;
+            --accent-soft: #dbeafe;
+            --border: #e2e8f0;
+            --warn-bg: #fff7ed;
+            --warn-border: #fdba74;
+            --warn-text: #9a3412;
+            --success-bg: #ecfdf5;
+            --success-text: #047857;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f172a;
+                --card: #111c33;
+                --text: #e5edf8;
+                --muted: #a8b6ca;
+                --accent: #7db2ff;
+                --accent-dark: #a9c9ff;
+                --accent-soft: #1e3a5f;
+                --border: #26364f;
+                --warn-bg: #2a2117;
+                --warn-border: #a16207;
+                --warn-text: #fcd34d;
+                --success-bg: #0d2a22;
+                --success-text: #6ee7b7;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
             margin: 0;
-            padding: 0;
+            padding: 32px 16px 48px;
+            background: var(--bg);
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+                "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
         }
 
-        header {
-            background-color: #007acc;
-            padding: 20px;
+        .page {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 42px 44px;
+            box-shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
+        }
+
+        .hero {
             text-align: center;
-            color: white;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-            color: white;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 20px auto;
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--border);
         }
 
         .icon {
             display: block;
-            margin: 0 auto;
-            width: 150px;
-            height: 150px;
+            width: 112px;
+            height: 112px;
+            margin: 0 auto 20px;
+            border-radius: 26px;
+            box-shadow: 0 12px 30px rgba(37, 99, 235, 0.2);
+        }
+
+        .eyebrow {
+            margin: 0 0 8px;
+            color: var(--accent);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.14em;
         }
 
         h1 {
-            text-align: center;
-            color: #007acc;
+            margin: 0;
+            font-size: clamp(27px, 4.4vw, 40px);
+            line-height: 1.25;
+            letter-spacing: -0.02em;
         }
 
-        p {
-            text-align: center;
-            font-size: 18px;
-            line-height: 1.6;
+        .subtitle {
+            margin: 12px auto 0;
+            max-width: 680px;
+            color: var(--muted);
+            font-size: 16px;
         }
 
-        .button-row {
+        .version-row {
             display: flex;
-            justify-content: space-between;
-            margin: 10px 0;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 18px;
         }
 
-        a.download-link {
-            flex: 1; /* 使用flex布局 */
-            margin: 0 5px; /* 左右边距 */
-            padding: 10px 15px;
-            background-color: #007acc;
-            color: white;
+        .pill {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 999px;
+            background: var(--accent-soft);
+            color: var(--accent);
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .notice {
+            margin: 24px 0 0;
+            padding: 14px 18px;
+            border: 1px solid var(--warn-border);
+            border-left: 4px solid var(--warn-border);
+            border-radius: 10px;
+            background: var(--warn-bg);
+            color: var(--warn-text);
+            font-size: 14px;
+            text-align: left;
+            line-height: 1.75;
+        }
+
+        .button-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+            margin-top: 28px;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 52px;
+            padding: 12px 18px;
+            border: 1px solid transparent;
+            border-radius: 12px;
+            background: var(--accent);
+            color: #ffffff;
+            font-size: 15px;
+            font-weight: 700;
             text-align: center;
             text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background-color 0.3s;
+            transition: background-color 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
         }
 
-        a.download-link:hover {
-            background-color: #005f99;
+        .button:hover {
+            background: var(--accent-dark);
+            transform: translateY(-1px);
+        }
+
+        .button.secondary {
+            border-color: var(--border);
+            background: transparent;
+            color: var(--accent);
+        }
+
+        .button.secondary:hover {
+            border-color: var(--accent);
+            background: var(--accent-soft);
+        }
+
+        .section-title {
+            margin: 38px 0 14px;
+            padding-left: 12px;
+            border-left: 4px solid var(--accent);
+            font-size: 21px;
+            line-height: 1.4;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 14px;
+            margin-top: 18px;
+        }
+
+        .card {
+            padding: 18px;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            background: var(--bg);
+        }
+
+        .card h3 {
+            margin: 0 0 6px;
+            font-size: 15px;
+        }
+
+        .card p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        .steps {
+            margin: 14px 0 0;
+            padding-left: 1.5em;
+        }
+
+        .steps li {
+            margin: 8px 0;
+        }
+
+        .ui {
+            padding: 1px 6px;
+            border-radius: 5px;
+            background: var(--accent-soft);
+            color: var(--accent);
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        code {
+            padding: 2px 6px;
+            border-radius: 5px;
+            background: var(--accent-soft);
+            color: var(--accent);
+            font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+            font-size: 0.92em;
+            overflow-wrap: anywhere;
         }
 
         footer {
-            background-color: #007acc;
-            color: white;
+            margin-top: 44px;
+            padding-top: 22px;
+            border-top: 1px solid var(--border);
+            color: var(--muted);
+            font-size: 13px;
             text-align: center;
-            padding: 10px 0;
-            margin-top: 20px;
         }
 
         footer h3 {
-            color: #ffffff;
+            margin: 18px 0 10px;
+            color: var(--text);
+            font-size: 14px;
         }
 
-        footer a {
-            color: white;
+        .social-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px 16px;
+            margin: 8px 0;
+        }
+
+        .social-links a {
+            color: var(--accent);
             text-decoration: none;
-            margin: 0 10px;
         }
 
-        footer a:hover {
+        .social-links a:hover {
             text-decoration: underline;
+        }
+
+        .modal {
+            position: fixed;
+            inset: 0;
+            z-index: 1000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background: rgba(15, 23, 42, 0.72);
+            backdrop-filter: blur(4px);
+        }
+
+        .modal.open {
+            display: flex;
+        }
+
+        .modal-card {
+            position: relative;
+            width: min(360px, 100%);
+            padding: 22px;
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            background: var(--card);
+            box-shadow: 0 24px 70px rgba(15, 23, 42, 0.28);
+            text-align: center;
+        }
+
+        .modal-card h3 {
+            margin: 0 0 14px;
+            font-size: 17px;
+        }
+
+        .modal-card img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .modal-card p {
+            margin: 12px 0 0;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 8px;
+            right: 10px;
+            width: 36px;
+            height: 36px;
+            border: 0;
+            border-radius: 50%;
+            background: transparent;
+            color: var(--muted);
+            font-size: 24px;
+            line-height: 1;
+            cursor: pointer;
+        }
+
+        .modal-close:hover {
+            background: var(--accent-soft);
+            color: var(--accent);
+        }
+
+        .copyright {
+            margin-top: 18px;
+            font-size: 12px;
+        }
+
+        @media (max-width: 720px) {
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 16px 10px 32px;
+            }
+
+            .page {
+                padding: 28px 20px;
+                border-radius: 14px;
+            }
+
+            .button-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media print {
+            body {
+                padding: 0;
+                background: #fff;
+            }
+
+            .page {
+                box-shadow: none;
+                border: 0;
+                padding: 0;
+            }
         }
     </style>
 </head>
 
 <body>
+    <main class="page">
+        <header class="hero">
+            <img src="https://raw.githubusercontent.com/BaldYang/QQBrowser_novel_switch/refs/heads/main/docs/src/icon.png"
+                alt="QQ浏览器小说文本转换器图标" class="icon">
 
-    <header>
-        <h1>QQ浏览器小说文本转换器</h1>
-    </header>
+            <p class="eyebrow">QQ浏览器小说文本转换器</p>
+            <h1>让已下载的小说，变成好读的 TXT</h1>
+            <p class="subtitle">
+                提取 QQ 浏览器中已下载的小说章节，自动分段、合并，生成可直接阅读或导入阅读器的 txt 文件。
+            </p>
 
-    <div class="container">
-        <img src="https://raw.githubusercontent.com/BaldYang/QQBrowser_novel_switch/refs/heads/main/docs/src/icon.png" alt="icon" class="icon">
+            <div class="version-row">
+                <span class="pill">最新版本 v2.0.0</span>
+                <span class="pill">2026/11/01 发布</span>
+                <span class="pill">作者 Mr. Measure</span>
+            </div>
 
-        <h1>欢迎使用「QQ浏览器小说文本转换器」</h1>
-        <p>该软件基于iApp制作，用于提取转换QQ浏览器中已下载的小说文本，QQ浏览器中下载的小说文本为网页文件，直接阅读体验不佳，该软件将此文本进行分段、截取，转换出可阅读的txt文本，并进行合并，可用于导入部分阅读器查看或直接查看。<br>（推荐Android11以下系统使用）</p>
+            <p class="notice">
+                <strong>使用前请注意：</strong>Android 11 及以上需要安装并启动 Shizuku；Android 10 及以下仅需授予存储权限。暂不支持 HarmonyOS 3 及以上和 iOS
+                系统。
+            </p>
 
-        <p>最新版本：2.0.0<br>发布时间：2026年11月02日</p>
-        <p>作者：Mr. Measure</p>
+            <div class="button-grid">
+                <a class="button" href="https://gitee.com/BaldYang/QQBrowser_novel_switch/releases" target="_blank"
+                    rel="noopener noreferrer">下载 v2.0.0（Gitee）</a>
+                <a class="button" href="https://github.com/BaldYang/QQBrowser_novel_switch/releases" target="_blank"
+                    rel="noopener noreferrer">下载 v2.0.0（GitHub）</a>
+                <a class="button secondary" href="Instructions.html">查看使用说明</a>
+                <a class="button secondary" href="https://f.wps.cn/g/U21FrH7L" target="_blank"
+                    rel="noopener noreferrer">满意度调查及意见反馈</a>
+            </div>
+        </header>
 
-        <div class="button-row">
-            <a href="https://gitee.com/BaldYang/QQBrowser_novel_switch/releases/download/v2.0.0/com.QQBrowsernovelswitch_v2.0.0.apk" target="_blank" class="download-link">
-                下载「QQ浏览器小说文本转换器」(Gitee)
-            </a>
-            <a href="https://github.com/BaldYang/QQBrowser_novel_switch/releases/download/v2.0.0/com.QQBrowsernovelswitch_v2.0.0.apk" target="_blank" class="download-link">
-                下载「QQ浏览器小说文本转换器」(GitHub)
-            </a>
+        <section>
+            <h2 class="section-title">它能做什么</h2>
+            <div class="cards">
+                <article class="card">
+                    <h3>提取章节</h3>
+                    <p>读取 QQ 浏览器已下载的小说章节文件，按章节顺序整理。</p>
+                </article>
+                <article class="card">
+                    <h3>合并文本</h3>
+                    <p>将章节合并为一个 txt 文件，保留章节标题、作者与正文分段。</p>
+                </article>
+                <article class="card">
+                    <h3>直接分享</h3>
+                    <p>转换完成后可直接分享文件，或发送到其它阅读器打开。</p>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">三步开始使用</h2>
+            <ol class="steps">
+                <li>在 QQ 浏览器中下载需要转换的小说。</li>
+                <li>Android 11 及以上安装并启动 Shizuku；Android 10 及以下授予存储权限。</li>
+                <li>打开 App，点击“<span class="ui">检索已下载的小说</span>”，再点击对应小说的“<span class="ui">转换</span>”。</li>
+            </ol>
+            <p>
+                转换完成后，文件保存在：
+                <code>/storage/emulated/0/QQBrowser_novel_switch/novel/小说名称（已完结/连载中）/小说名称.txt</code>
+            </p>
+            <p>
+                首次使用请查看 <a href="Instructions.html">完整使用说明</a>，其中包含 Shizuku 配对、启动和常见问题。
+            </p>
+        </section>
+
+        <footer>
+            <h3>关于此软件</h3>
+            <div class="social-links">
+                <a href="https://github.com/BaldYang/QQBrowser_novel_switch" target="_blank"
+                    rel="noopener noreferrer">GitHub</a>
+                <a href="https://gitee.com/BaldYang/QQBrowser_novel_switch" target="_blank"
+                    rel="noopener noreferrer">Gitee</a>
+            </div>
+
+            <h3>联系作者</h3>
+            <div class="social-links">
+                <a href="https://qm.qq.com/cgi-bin/qm/qr?_wv=1027&amp;k=RxeXEFvTH6iuomlVPaPlLFkqc3gwJ8VY&amp;authKey=P7JcF%2F1vf6%2Fi2bsRJDaxS6KRpHr0C5wKclkH9TMqB1sJUyJJfG4NpATwdmA%2FsUvE&amp;noverify=0&amp;group_code=658021047"
+                    target="_blank" rel="noopener noreferrer">QQ 交流群</a>
+                <a href="mailto:measureyc@outlook.com">作者邮箱</a>
+                <a href="#" id="wechatLink">微信公众号</a>
+            </div>
+
+            <p class="copyright">
+                「QQ浏览器小说文本转换器」 Copyright (c) 2024-2027 Mr. Measure<br>
+                网站已使用 Google Analytics
+            </p>
+        </footer>
+
+        <div class="modal" id="wechatModal" role="dialog" aria-modal="true"
+            aria-labelledby="wechatModalTitle" aria-hidden="true">
+            <div class="modal-card">
+                <button class="modal-close" type="button" aria-label="关闭">×</button>
+                <h3 id="wechatModalTitle">微信公众号</h3>
+                <img src="src/wechat_qrcode.jpg" alt="微信公众号二维码">
+                <p>微信扫码关注“小说文本转换器”</p>
+            </div>
         </div>
-
-        <div class="button-row">
-            <a href="https://baldyang.github.io/QQBrowser_novel_switch/Instructions" target="_blank" class="download-link">
-                查看使用说明
-            </a>
-            <a href="https://f.wps.cn/g/U21FrH7L" target="_blank" class="download-link">
-                满意度调查及意见反馈
-            </a>
-        </div>
-    </div>
-
-    <footer>
-        <h3>关于此软件</h3>
-        <a href="https://github.com/BaldYang/QQBrowser_novel_switch" target="_blank"><u>GitHub</u></a>
-        <a href="https://gitee.com/BaldYang/QQBrowser_novel_switch" target="_blank"><u>Gitee</u></a>
-
-        <h3>联系作者</h3><p>
-        <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=RxeXEFvTH6iuomlVPaPlLFkqc3gwJ8VY&authKey=P7JcF%2F1vf6%2Fi2bsRJDaxS6KRpHr0C5wKclkH9TMqB1sJUyJJfG4NpATwdmA%2FsUvE&noverify=0&group_code=658021047" target="_blank"><u>加入QQ交流群</u></a>
-        <a href="javascript:void(0)" onclick="showEmail()"><u>查看作者邮箱</u></a></p><p>
-
-        <p>「QQ浏览器小说文本转换器」 Copyright (c) 2024-2027 Mr. Measure<br>
-        网站已使用Google Analytics</p>
-    </footer>
+    </main>
 
     <script>
-        const email = 'measureyc@outlook.com';
+        const wechatLink = document.getElementById('wechatLink');
+        const wechatModal = document.getElementById('wechatModal');
+        const wechatClose = wechatModal.querySelector('.modal-close');
 
-        function showEmail() {
-            alert(`作者邮箱:\n${email}`);
+        function openWechatModal(event) {
+            event.preventDefault();
+            wechatModal.classList.add('open');
+            wechatModal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+            wechatClose.focus();
         }
-    </script>
 
+        function closeWechatModal() {
+            wechatModal.classList.remove('open');
+            wechatModal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+            wechatLink.focus();
+        }
+
+        wechatLink.addEventListener('click', openWechatModal);
+        wechatClose.addEventListener('click', closeWechatModal);
+        wechatModal.addEventListener('click', event => {
+            if (event.target === wechatModal) {
+                closeWechatModal();
+            }
+        });
+        document.addEventListener('keydown', event => {
+            if (event.key === 'Escape' && wechatModal.classList.contains('open')) {
+                closeWechatModal();
+            }
+        });
+    </script>
 </body>
+
 </html>

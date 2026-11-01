@@ -5,170 +5,419 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MRY9W0Z4ZR"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      
-      gtag('config', 'G-MRY9W0Z4ZR',{ 'debug_mode':true });
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-MRY9W0Z4ZR');
     </script>
-    
+
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2991666358335790"
-     crossorigin="anonymous"></script>
-    
+        crossorigin="anonymous"></script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QQ浏览器小说文本转换器 使用说明</title>
+    <meta name="description" content="QQ浏览器小说文本转换器 v2.0.0 使用说明：下载小说、启用 Shizuku、转换合并与分享。">
+    <title>使用说明 v2.0.0 · QQ浏览器小说文本转换器</title>
+
     <style>
+        :root {
+            --bg: #f4f7fb;
+            --card: #ffffff;
+            --text: #1f2937;
+            --muted: #64748b;
+            --accent: #2563eb;
+            --accent-dark: #1d4ed8;
+            --accent-soft: #dbeafe;
+            --border: #e2e8f0;
+            --warn-bg: #fff7ed;
+            --warn-border: #fdba74;
+            --warn-text: #9a3412;
+            --code-bg: #f1f5f9;
+            --code-text: #0f172a;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f172a;
+                --card: #111c33;
+                --text: #e5edf8;
+                --muted: #a8b6ca;
+                --accent: #7db2ff;
+                --accent-dark: #a9c9ff;
+                --accent-soft: #1e3a5f;
+                --border: #26364f;
+                --warn-bg: #2a2117;
+                --warn-border: #a16207;
+                --warn-text: #fcd34d;
+                --code-bg: #0b1424;
+                --code-text: #dbeafe;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
             margin: 0;
-            padding: 0;
+            padding: 32px 16px 64px;
+            background: var(--bg);
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+                "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            line-height: 1.85;
+            -webkit-font-smoothing: antialiased;
         }
 
-        header {
-            background-color: #007acc;
-            padding: 20px;
-            text-align: center;
-            color: white;
+        .page {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 40px 44px;
+            box-shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
         }
 
-        header h1 {
+        .hero {
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 28px;
+        }
+
+        .eyebrow {
+            margin: 0 0 8px;
+            color: var(--accent);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+        }
+
+        h1 {
             margin: 0;
-            font-size: 2.5em;
+            font-size: clamp(26px, 4vw, 38px);
+            line-height: 1.25;
+            letter-spacing: -0.02em;
         }
 
-        main {
-            background-color: white;
-            padding: 20px;
+        .version {
+            display: inline-block;
+            margin: 12px 0 0;
+            padding: 3px 10px;
+            border-radius: 999px;
+            background: var(--accent-soft);
+            color: var(--accent);
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .notice {
+            margin: 22px 0 0;
+            padding: 14px 18px;
+            border: 1px solid var(--warn-border);
+            border-left: 4px solid var(--warn-border);
+            border-radius: 10px;
+            background: var(--warn-bg);
+            color: var(--warn-text);
+            font-size: 14px;
+            line-height: 1.75;
+        }
+
+        .meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 20px;
+            margin-top: 18px;
+            color: var(--muted);
+            font-size: 13px;
         }
 
         h2 {
-            color: #007acc;
-            font-size: 1.8em;
-            border-bottom: 2px solid #007acc;
-            padding-bottom: 10px;
+            margin: 42px 0 16px;
+            padding-left: 12px;
+            border-left: 4px solid var(--accent);
+            font-size: 22px;
+            line-height: 1.4;
         }
 
         h3 {
-            color: #007acc;
-            margin-top: 30px;
-            font-size: 1.5em;
+            margin: 30px 0 12px;
+            font-size: 18px;
+            line-height: 1.5;
         }
 
-        h4, h5 {
-            color: #005f99;
-            margin-top: 20px;
-            font-size: 1.2em;
+        h4 {
+            margin: 22px 0 10px;
+            font-size: 16px;
+            line-height: 1.5;
         }
 
         p {
-            line-height: 1.6;
             margin: 10px 0;
         }
 
+        ol,
+        ul {
+            margin: 10px 0;
+            padding-left: 1.6em;
+        }
+
+        li {
+            margin: 6px 0;
+        }
+
         code {
-            background-color: #eee;
-            padding: 2px 5px;
-            border-radius: 4px;
+            padding: 2px 6px;
+            border-radius: 5px;
+            background: var(--code-bg);
+            color: var(--code-text);
+            font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
+            font-size: 0.92em;
+            overflow-wrap: anywhere;
+        }
+
+        .path {
+            display: block;
+            margin: 12px 0;
+            padding: 12px 14px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background: var(--code-bg);
+            color: var(--code-text);
+            font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+            font-size: 13px;
+            line-height: 1.7;
+            overflow-wrap: anywhere;
+        }
+
+        .ui {
+            padding: 1px 6px;
+            border-radius: 5px;
+            background: var(--accent-soft);
+            color: var(--accent);
+            font-weight: 600;
+            white-space: nowrap;
         }
 
         a {
-            color: #007acc;
-            text-decoration: none;
+            color: var(--accent);
+            text-decoration-thickness: 1px;
+            text-underline-offset: 3px;
+        }
+
+        a:hover {
+            text-decoration-thickness: 2px;
+        }
+
+        .guide-link {
+            display: inline-block;
+            margin-top: 6px;
+            font-size: 14px;
         }
 
         .video-links {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .video-links li {
+            margin: 0;
         }
 
         .video-links a {
-            background-color: #f4f4f4;
-            padding: 10px;
-            border-radius: 5px;
-            text-align: center;
-            flex: 1;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            font-weight: bold;
+            display: inline-block;
+            padding: 8px 14px;
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            background: var(--accent-soft);
+            color: var(--accent);
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: border-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .video-links a:hover {
+            border-color: var(--accent);
+            transform: translateY(-1px);
+        }
+
+        .video-links a.pending {
+            opacity: 0.55;
+            pointer-events: none;
+            cursor: not-allowed;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 10px;
+            font-size: 14px;
+            text-decoration: none;
         }
 
         footer {
-            background-color: #007acc;
-            color: white;
+            margin-top: 42px;
+            padding-top: 18px;
+            border-top: 1px solid var(--border);
+            color: var(--muted);
+            font-size: 13px;
             text-align: center;
-            padding: 10px 0;
-            margin-top: 20px;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 16px 10px 40px;
+            }
+
+            .page {
+                padding: 26px 20px;
+                border-radius: 14px;
+            }
+
+            h2 {
+                margin-top: 34px;
+            }
+        }
+
+        @media print {
+            body {
+                padding: 0;
+                background: #fff;
+            }
+
+            .page {
+                box-shadow: none;
+                border: 0;
+                padding: 0;
+            }
+
+            a {
+                color: inherit;
+            }
         }
     </style>
 </head>
 
 <body>
+    <main class="page">
+        <header class="hero">
+            <p class="eyebrow">使用说明 · USER GUIDE</p>
+            <h1>QQ浏览器小说文本转换器</h1>
+            <p class="version">v2.0.0</p>
 
-    <header>
-        <h1>QQ浏览器小说文本转换器</h1>
-    </header>
+            <p class="notice">
+                请更新至 v2.0.0 查看本说明，谢谢！<br>
+                <strong>暂不支持 HarmonyOS 3 及以上和 iOS 系统使用。</strong>
+            </p>
 
-    <main>
-        <h2>使用说明v1.1.0</h2>
-        请更新至v1.1.0查看本说明，谢谢！（推荐Android11以下系统使用）
-        <p>更新时间：<em><code>2024/11/10</code></em><br> 作者：<em><code>Mr. Measure</code></em></p>
+            <div class="meta">
+                <span>更新时间：2026/11/01</span>
+                <span>作者：Mr. Measure</span>
+            </div>
 
-        <h3>一、简介</h3>
-        <p>该软件基于iApp制作，用于提取转换QQ浏览器中已下载的小说文本，QQ浏览器中下载的小说文本为网页文件，直接阅读体验不佳，该软件将此文本进行分段、截取，转换出可阅读的txt文本，并进行合并，可用于导入部分阅读器查看或直接查看。</p>
+            <a class="back-link" href="index.html">← 返回首页</a>
+        </header>
 
-        <h3>二、使用方法</h3>
-        <h4>1.下载QQ浏览器小说（如已下载可忽略此步）</h4>
-        <p>打开QQ浏览器—点击底部导航栏“<code>免费小说</code>”—搜索小说并打开—点击右上角“<code>下载</code>”—观看广告（或开通悦读卡）—开始下载并完成。</p>
+        <section>
+            <h2>一、简介</h2>
+            <p>
+                该软件基于 iApp 制作，用于提取转换 QQ 浏览器中已下载的小说文本。QQ 浏览器中下载的小说文本为网页文件，直接阅读体验不佳；该软件将此文本进行分段、截取，转换出可阅读的 txt
+                文本，并进行合并，可用于导入部分阅读器查看或直接查看。
+            </p>
+        </section>
 
-        <h4>2.获取小说章节数和QQ浏览器小说编号</h4>
-        <p>打开「QQ浏览器小说文本转换器」首页—点击“<code>检索已下载的小说</code>”—查看对应小说编号（小说编号已自动复制到剪切板）。<br><br>
-        备用方法：<br>
-        在QQ浏览器中打开已下载的小说—点击底部导航栏“<code>目录</code>”—上方显示“<code>已完结共xxx章</code>”或“<code>连载至第xxx章</code>”—记录“xxx”。<br>
-        打开手机文件管理或文件查看器（推荐使用“<a href="https://mt2.cn/download/">MT管理器</a>”）—打开路径“<code>/Android/data/com.tencent.mtt/files/hippyBusiness/novel/book/</code>”—记录其内文件夹名（可<code>重命名—复制</code>）。如已下载多本小说，可打开路径内“<code>basic.txt</code>”文件，查看对应小说名称后再记录小说编号。</p>
+        <section>
+            <h2>二、使用方法</h2>
 
-        <h4>3.小说文本提取、转换、合并、压缩</h4>
-        <p>打开「QQ浏览器小说文本转换器」首页—打开键盘剪切板对应粘贴或输入已记录的小说名称、章节数（小于或等于总章节数）和编号—点击“<code>转换小说文本并生成合并文本(自动压缩)</code>”—等待转换完成。<br><br>
-        已转换成功的小说文本路径（分章节，每个章节为一个单独的txt文件）：“<code>/QQBrowser_novel_switch/novel/xxx_novel/book/</code>”<br>
-        合并文件路径：“<code>/QQBrowser_novel_switch/novel/xxx_novel/merger/xxx(“已完结”或“连载中”).txt</code>”<br>
-        压缩文件路径：“<code>/QQBrowser_novel_switch/zip/xxx_novel.zip</code>”<br></p>
+            <h3>1. 下载 QQ 浏览器小说（如已下载可忽略此步）</h3>
+            <p>
+                打开 QQ 浏览器 — 点击导航栏“<span class="ui">小说</span>” — 搜索小说并打开 — 点击右上角“<span class="ui">下载</span>” —
+                观看广告（或开通悦读卡）— 开始下载并完成。
+            </p>
 
-        <h4>4.查看文本并分享</h4>
-        <p>打开手机文件管理或文件查看器—打开上述转换路径—使用阅读器查看或分享（推荐使用“<a href="http://fb.miaogongzi.cc/">阅读</a>”）。</p>
+            <h3>2. 下载并启用 Shizuku 服务（Android 10 及以下系统忽略此步，仅需授予存储权限即可）</h3>
+            <p>
+                打开「QQ浏览器小说文本转换器」首页或点击左下角“<span class="ui">检索已下载的小说</span>”按钮 — 点击“<span
+                    class="ui">前往下载Shizuku</span>”（如已下载请跳转至第二行）。
+            </p>
+            <p>
+                下载安装完成后打开 Shizuku — 点击“<span class="ui">配对</span>” — 点击“<span class="ui">通知设置</span>” — 点击“<span
+                    class="ui">允许通知</span>” — 回到 Shizuku 点击“<span class="ui">开发者选项</span>”（打不开可前往系统设置 — 关于手机 — 连续点击 7
+                次“版本号”即可；不同手机型号操作可能略有差异）。
+            </p>
+            <p>
+                在开发者设置中打开“<span class="ui">USB调试</span>”和“<span class="ui">无线调试</span>” — 点击无线调试中的“<span
+                    class="ui">使用配对码配对设备</span>” — 记住 WLAN 配对码并下拉打开通知栏 — 点击“<span class="ui">Shizuku已找到配对服务</span>”右侧下箭头
+                — 点击“<span class="ui">输入配对码</span>” — 输入刚刚的 WLAN 配对码 — 点击右侧的发送小箭头 — 配对成功后打开 Shizuku 首页 — 点击“<span
+                    class="ui">启动</span>”。
+            </p>
+            <p>
+                <a class="guide-link" href="https://shizuku.rikka.app/zh-hans/guide/setup/" target="_blank"
+                    rel="noopener noreferrer">Shizuku官方配置指南</a><br>
+                相关问题可打开此链接，点击“<span class="ui">常见问题</span>”查找解决方案。HarmonyOS 3 和 HarmonyOS 4 用户如有能力可使用“<span
+                    class="ui">通过连接电脑启动</span>”启动 Shizuku（HarmonyOS 5 及以上不支持）。
+            </p>
 
-        <h3>三、“设置”说明</h3>
-        <h4>1.打开方式</h4>
-        <p>打开「QQ浏览器小说文本转换器」首页—进入主页—点击右上角设置图标（长按可打开QQ浏览器）。</p>
+            <h3>3. 小说文本提取、转换、合并、分享</h3>
+            <ol>
+                <li>打开「QQ浏览器小说文本转换器」首页；</li>
+                <li>点击左下角“<span class="ui">检索已下载的小说</span>”按钮；</li>
+                <li>点击每本书后面的“<span class="ui">转换</span>”按钮；</li>
+                <li>等待转换完成。</li>
+            </ol>
+            <p>已转换成功的小说文本路径（已合并）：</p>
+            <code class="path">/storage/emulated/0/QQBrowser_novel_switch/novel/xxx（“已完结”或“连载中”）/xxx.txt</code>
+            <p>
+                点击“<span class="ui">分享</span>”按钮可分享小说文件，或用其它阅读器打开。
+            </p>
+        </section>
 
-        <h4>2.内容</h4>
-        <h5>(1)使用说明</h5>
-        <h5>(2)查看近期公告</h5>
-        <p>用于发布公告，查看支持的QQ浏览器版本，长按可查看往期公告。</p>
-        <h5>(3)检查更新</h5>
-        <h5>(4)满意度调查及意见反馈</h5>
-        <h5>(5)联系作者</h5>
-        <p>包含QQ交流群群号、作者邮箱及社交账号。</p>
-        <h5>(6)打赏作者
-        <h5>(7)分享软件官网</h5>
-        <h5>(8)关于</h5>
+        <section>
+            <h2>三、“设置”说明</h2>
 
-        <h2>演示视频v1.1.0</h2>
-        <div class="video-links">
-            <a href="https://b23.tv/LVDC4Id">bilibili</a>
-            <a href="https://weibo.com/7024676243/5098954812821004">微博</a>
-            <a href="https://s.xsj.qq.com/EeqDCqil">QQ短视频(小世界)</a>
-            <a href="https://x.com/yangchen1991113/status/1855287886784143507">X(Twitter)</a>
-            <a href="https://youtu.be/_rzc8GUVTlU">YouTube</a>
-            <a href="https://www.tiktok.com/@baldyc2024/video/7435320457194114350">TikTok</a>
-            <a href="https://www.instagram.com/reel/DCKGHJqMy5x/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">Instagram</a></p>
-        </div>
+            <h3>1. 打开方式</h3>
+            <p>
+                打开「QQ浏览器小说文本转换器」首页 — 进入主页 — 点击右上角设置图标（长按可打开 QQ 浏览器）。
+            </p>
+
+            <h3>2. 内容</h3>
+            <ol>
+                <li>使用说明</li>
+                <li>查看近期公告：用于发布公告。</li>
+                <li>检查更新</li>
+                <li>满意度调查及意见反馈</li>
+                <li>联系作者：包含 QQ 交流群群号、作者邮箱及微信公众号。</li>
+                <li>打赏作者</li>
+                <li>分享软件官网</li>
+                <li>第三方信息共享清单（Google Analytics）</li>
+                <li>关于</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>演示视频 v2.0.0</h2>
+            <ul class="video-links">
+                <li><a class="pending" href="#" aria-disabled="true" title="链接待补充">bilibili</a></li>
+                <li><a class="pending" href="#" aria-disabled="true" title="链接待补充">微博</a></li>
+                <li><a class="pending" href="#" aria-disabled="true" title="链接待补充">抖音</a></li>
+                <li><a class="pending" href="#" aria-disabled="true" title="链接待补充">小红书</a></li>
+                <li><a class="pending" href="#" aria-disabled="true" title="链接待补充">微信视频号</a></li>
+            </ul>
+        </section>
+
+        <footer>
+            QQ浏览器小说文本转换器 · v2.0.0 · Mr. Measure
+        </footer>
     </main>
-
-    <footer>
-        <p>「QQ浏览器小说文本转换器」 Copyright (c) 2024 Mr. Measure</p>
-    </footer>
-
 </body>
+
 </html>
