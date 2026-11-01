@@ -16,8 +16,8 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="QQ浏览器小说文本转换器 v2.0.0 使用说明：下载小说、启用 Shizuku、转换合并与分享。">
-    <title>使用说明 v2.0.0 · QQ浏览器小说文本转换器</title>
+    <meta name="description" content="QQ浏览器小说文本转换器 使用说明：下载小说、启用 Shizuku、转换合并与分享。">
+    <title>使用说明·QQ浏览器小说文本转换器</title>
 
     <style>
         :root {
@@ -234,25 +234,20 @@
         .video-links a {
             display: inline-block;
             padding: 8px 14px;
-            border: 1px solid var(--border);
+            border: 1px solid var(--accent);
             border-radius: 999px;
-            background: var(--accent-soft);
-            color: var(--accent);
+            background: var(--accent);
+            color: #ffffff;
             font-size: 14px;
             font-weight: 600;
             text-decoration: none;
-            transition: border-color 0.2s ease, transform 0.2s ease;
+            transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
         }
 
         .video-links a:hover {
-            border-color: var(--accent);
+            background: var(--accent-dark);
+            border-color: var(--accent-dark);
             transform: translateY(-1px);
-        }
-
-        .video-links a.pending {
-            opacity: 0.55;
-            pointer-events: none;
-            cursor: not-allowed;
         }
 
         .back-link {
@@ -406,11 +401,11 @@
         <section>
             <h2>演示视频 v2.0.0</h2>
             <ul class="video-links">
-                <li><a class="pending" href="#" aria-disabled="true" title="链接待补充">bilibili</a></li>
-                <li><a class="pending" href="#" aria-disabled="true" title="链接待补充">微博</a></li>
-                <li><a class="pending" href="#" aria-disabled="true" title="链接待补充">抖音</a></li>
-                <li><a class="pending" href="#" aria-disabled="true" title="链接待补充">小红书</a></li>
-                <li><a class="pending" href="#" aria-disabled="true" title="链接待补充">微信视频号</a></li>
+                <li><a href="#" title="链接待补充">bilibili</a></li>
+                <li><a href="#" title="链接待补充">微博</a></li>
+                <li><a href="#" title="链接待补充">抖音</a></li>
+                <li><a href="#" title="链接待补充">小红书</a></li>
+                <li><a href="#" title="链接待补充">微信视频号</a></li>
             </ul>
         </section>
 
