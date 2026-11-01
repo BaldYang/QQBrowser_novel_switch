@@ -34,7 +34,7 @@
 
 ## 演示视频v2.0.0
 [bilibili](https://www.bilibili.com/video/BV1gDxt6AEtU/) 
-[微博](https://weibo.com/tv/show/1034:5360578034860067?mid=5360581989107531) 
+[微博](https://weibo.com/tv/show/1034:5360589686636662?mid=5360590173248873) 
 [抖音](https://v.douyin.com/lm6M-K9g9nk/) 
 [小红书](https://www.xiaohongshu.com/discovery/item/6ae75621000000001b01c9f9?source=webshare&xhsshare=pc_web&xsec_token=YB2sb5tpY4W-OlIMiK9J0bced8E6fMjx7_MtwDKvBp--4=&xsec_source=pc_share) 
-[微信视频号](https://weixin.qq.com/sph/AP8LkHAvl)  
+[微信视频号](https://weixin.qq.com/sph/APGrrNfuP)  
