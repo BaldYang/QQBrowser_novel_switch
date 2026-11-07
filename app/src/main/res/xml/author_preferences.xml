@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Preference
+        app:key="video_show"
+        app:title="@string/author_header_title"
+        app:summary="@string/author_header_summary"
+        app:iconSpaceReserved="false"
+        app:selectable="false"/>
+
+    <Preference
+        app:key="QQGroup"
+        app:title="@string/author_qq"
+        app:icon="@drawable/qq_logo"/>
+
+    <Preference
+        app:key="wechat"
+        app:title="@string/author_wechat"
+        app:icon="@drawable/wechat_logo"/>
+
+    <Preference
+        app:key="mail"
+        app:title="@string/author_mail"
+        app:icon="?attr/mailIcon" />
+</PreferenceScreen>

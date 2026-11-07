@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Base.Theme.QQ浏览器小说文本转换器" parent="Theme.Material3.DayNight.NoActionBar">
+
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowLayoutInDisplayCutoutMode"
+            tools:targetApi="27">shortEdges</item>
+
+        <item name="settingsButtonIcon">@drawable/settings_light</item>
+        <item name="mailIcon">@drawable/mail_icon_light</item>
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.App.MaterialAlertDialog</item>
+    </style>
+
+    <style name="ThemeOverlay.App.MaterialAlertDialog"
+        parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="colorSurface">@color/page_background</item>
+        <item name="colorSurfaceContainerHigh">@color/page_background</item>
+    </style>
+
+    <style name="Theme.QQ浏览器小说文本转换器" parent="Base.Theme.QQ浏览器小说文本转换器" />
+</resources>

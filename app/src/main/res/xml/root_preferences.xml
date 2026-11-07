@@ -1,0 +1,55 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Preference
+        app:key="settings"
+        app:title="@string/action_settings"
+        app:icon="?attr/settingsButtonIcon"
+        app:selectable="false" />
+
+    <Preference
+        app:key="instructions"
+        app:title="@string/action_instructions"
+        app:iconSpaceReserved="false" />
+
+    <Preference
+        app:key="announces"
+        app:title="@string/action_announcements"
+        app:iconSpaceReserved="false"/>
+
+    <Preference
+        app:key="update"
+        app:title="@string/action_check_update"
+        app:iconSpaceReserved="false"/>
+
+    <Preference
+        app:key="feedback"
+        app:title="@string/action_feedback"
+        app:iconSpaceReserved="false"/>
+
+    <Preference
+        app:key="author"
+        app:title="@string/action_contact_author"
+        app:iconSpaceReserved="false"/>
+
+    <Preference
+        app:key="reward"
+        app:title="@string/action_reward_author"
+        app:iconSpaceReserved="false"/>
+
+    <Preference
+        app:key="shareWeb"
+        app:title="@string/action_share_website"
+        app:iconSpaceReserved="false"/>
+
+    <Preference
+        app:key="API"
+        app:title="@string/action_third_party"
+        app:iconSpaceReserved="false"/>
+
+    <Preference
+        app:key="about"
+        app:title="@string/action_about"
+        app:iconSpaceReserved="false"/>
+
+</PreferenceScreen>

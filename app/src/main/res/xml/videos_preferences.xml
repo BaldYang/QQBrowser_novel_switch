@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Preference
+        app:key="video_show"
+        app:title="@string/videos_header_title"
+        app:summary="@string/videos_header_summary"
+        app:iconSpaceReserved="false"
+        app:selectable="false"/>
+
+    <Preference
+        app:key="bilibili"
+        app:title="@string/bilibili"
+        app:icon="@drawable/bilibili_logo"/>
+
+    <Preference
+        app:key="weibo"
+        app:title="@string/weibo"
+        app:icon="@drawable/weibo_logo"/>
+
+    <Preference
+        app:key="douyin"
+        app:title="@string/douyin"
+        app:icon="@drawable/douyin_logo"/>
+
+    <Preference
+        app:key="rednote"
+        app:title="@string/rednote"
+        app:icon="@drawable/rednote_logo"/>
+
+    <Preference
+        app:key="wechatvideo"
+        app:title="@string/wechat_video"
+        app:icon="@drawable/wechatvideo_logo"/>
+</PreferenceScreen>

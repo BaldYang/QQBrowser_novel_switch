@@ -1,0 +1,138 @@
+<resources>
+    <string name="app_name">QQ浏览器小说文本转换器</string>
+    <string name="webUrl">https://baldyang.github.io/QQBrowser_novel_switch</string>
+    <string name="githubUrl">https://github.com/BaldYang/QQBrowser_novel_switch</string>
+    <string name="giteeUrl">https://gitee.com/BaldYang/QQBrowser_novel_switch</string>
+    <string name="instructionsUrl">https://baldyang.github.io/QQBrowser_novel_switch/Instructions</string>
+    <string name="updateUrl">https://baldyang.github.io/QQBrowser_novel_switch/update</string>
+    <string name="announcesUrl">https://baldyang.github.io/QQBrowser_novel_switch/announce</string>
+    <string name="feedbackUrl">https://f.wps.cn/g/U21FrH7L</string>
+    <string name="shizukuDownloadUrl">https://github.com/thedjchi/Shizuku/releases/download/v13.7.0-thedjchi/shizuku-v13.7.0-thedjchi.apk</string>
+    <string name="QQGroupUrl"><![CDATA[https://qun.qq.com/universal-share/share?ac=1&authKey=M2Kgn7T6gKfrDyrREfGZHSwMgToC%2BmWHAE8wVFavhLvotHs5DJHeudWbktnbjRj7&busi_data=eyJncm91cENvZGUiOiI2NTgwMjEwNDciLCJ0b2tlbiI6Ik5iZE9BM0hpd3lsV2l1VndIbnRCemZETHZMT3lLL3NZSXZacnlJVjRMZ1RpbCtrUmNqeTNvck5kU015WkVRb3kiLCJ1aW4iOiIzMTM5MDI1ODE2In0%3D&data=0v8ghBOjEWxAJ50LFhKxN8hkpJfoPQSu34oQmzmbJMSBjtORvW_C2vsnBLPKi3SF0Cme-Za9DVwDF-IiQv5QAA&svctype=4&tempid=h5_group_info]]></string>
+
+    <string name="bilibiliUrl">https://www.bilibili.com/video/BV1gDxt6AEtU/</string>
+    <string name="weiboUrl">https://weibo.com/tv/show/1034:5360589686636662?mid=5360590173248873</string>
+    <string name="douyinUrl">https://v.douyin.com/lm6M-K9g9nk/</string>
+    <string name="rednoteUrl">https://www.xiaohongshu.com/discovery/item/6ae75621000000001b01c9f9?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=YB2sb5tpY4W-OlIMiK9J0bced8E6fMjx7_MtwDKvBp--4=&amp;xsec_source=pc_share</string>
+    <string name="wechatvideoUrl">https://weixin.qq.com/sph/APGrrNfuP</string>
+
+    <string name="action_settings">设置</string>
+    <string name="action_instructions">使用说明</string>
+    <string name="action_announcements">查看最新公告</string>
+    <string name="action_check_update">检查更新</string>
+    <string name="action_feedback">意见反馈</string>
+    <string name="action_contact_author">联系作者</string>
+    <string name="action_reward_author">打赏作者</string>
+    <string name="action_share_website">分享软件官网</string>
+    <string name="action_third_party">第三方信息共享清单</string>
+    <string name="action_about">关于</string>
+    <string name="action_search_downloaded">检索已下载的小说</string>
+
+    <string name="welcome_title">欢迎进入「%1$s」</string>
+    <string name="welcome_message">当前软件版本：%1$s\n作者：Mr. Measure</string>
+
+    <string name="empty_novels">未检索到已下载的QQ浏览器小说</string>
+    <string name="initial_use_hint">初次使用请点击“检索已下载的小说”和“使用说明”</string>
+    <string name="status_finished">已完结</string>
+    <string name="status_ongoing">连载中</string>
+    <string name="column_index">序号</string>
+    <string name="column_name">小说名称</string>
+    <string name="column_status">状态</string>
+    <string name="column_chapters">章节数</string>
+    <string name="convert">转换</string>
+    <string name="searching">正在检索已下载的QQ浏览器小说，请稍后...</string>
+    <string name="search_result_count">共检索到%1$d本小说，点击“转换”按钮开始转换</string>
+
+    <string name="a11y_settings">设置，长按打开QQ浏览器</string>
+    <string name="a11y_novel_index">第%1$d本</string>
+    <string name="a11y_novel_name">小说名称：%1$s</string>
+    <string name="a11y_novel_status">状态：%1$s</string>
+    <string name="a11y_novel_chapters">章节数：%1$d</string>
+    <string name="a11y_convert">转换《%1$s》</string>
+    <string name="a11y_progress">转换进度：%1$d%%</string>
+    <string name="progress_label">转换进度</string>
+    <string name="a11y_wechat_qr">微信二维码</string>
+    <string name="a11y_alipay_qr">支付宝收款码</string>
+    <string name="a11y_wechat_pay_qr">微信收款码</string>
+    <string name="progress_percent">%1$d%%</string>
+
+    <string name="convert_start_title">正在转换《%1$s》</string>
+    <string name="convert_cancelled">转换取消</string>
+    <string name="convert_failed_unknown">转换失败，请稍后重试</string>
+    <string name="convert_done_title">《%1$s》已转换完成</string>
+    <string name="convert_done_message">文件保存路径：%1$s\n作者：%2$s\n已转换章节数：%3$d\n用时：%4$s秒</string>
+    <string name="share">分享</string>
+    <string name="share_chooser">分享小说文件</string>
+    <string name="share_failed">分享失败</string>
+    <string name="confirm">确定</string>
+    <string name="notification_channel">小说转换</string>
+    <string name="notification_title">正在转换《%1$s》  %2$d%%</string>
+    <string name="unknown_author">未知</string>
+
+    <string name="storage_permission_message">请授予存储相关权限，用于读取和保存QQ浏览器小说文件</string>
+    <string name="storage_permission_denied_title">未授予存储相关权限</string>
+    <string name="go_settings">前往系统设置授权</string>
+    <string name="cancel">取消</string>
+    <string name="network_check">请检查网络连接</string>
+    <string name="no_app_for_link">未找到可打开该链接的应用</string>
+    <string name="cannot_open_link">无法打开该链接</string>
+    <string name="no_qq_browser">未安装QQ浏览器</string>
+
+    <string name="update_new_title">发现新版本%1$s</string>
+    <string name="update_now">立即更新</string>
+    <string name="update_later">稍后更新</string>
+    <string name="update_latest">当前已为最新版本</string>
+    <string name="update_failed">检查更新失败，请稍后重试</string>
+    <string name="update_default_message">发现新版本，请前往更新</string>
+    <string name="update_checking">检查更新中...</string>
+
+    <string name="announce_fetching">获取最新公告中...</string>
+    <string name="announce_failed">获取公告失败，请稍后重试</string>
+    <string name="announce_title">公告 %1$s</string>
+    <string name="announce_ack">我已知晓</string>
+    <string name="announce_title_only">公告</string>
+
+    <string name="instructions_message">可选择查看文字说明或观看演示视频</string>
+    <string name="instructions_text">查看文字说明</string>
+    <string name="instructions_video">观看演示视频</string>
+
+    <string name="reward_message">为爱发电，行行好吧(｡･ω･｡)ﾉ♡\n请选择打赏方式并截图保存收款码</string>
+    <string name="alipay">支付宝</string>
+    <string name="wechat_pay">微信支付</string>
+
+    <string name="about_title">关于「%1$s」</string>
+    <string name="about_message">当前软件版本：%1$s\nCopyright (C) 2024-2027 Mr. Measure\n特别鸣谢：Quail-fire Lavender</string>
+    <string name="about_website">访问官网</string>
+    <string name="share_website_chooser">分享「%1$s」官网</string>
+
+    <string name="author_header_title">联系作者：Mr. Measure</string>
+    <string name="author_header_summary">点击下方账号前往</string>
+    <string name="author_qq">QQ交流群：658021047</string>
+    <string name="author_wechat">微信公众号：小说文本转换器</string>
+    <string name="author_mail">邮箱：measureyc@outlook.com</string>
+    <string name="wechat_qr_title">微信扫码关注“小说文本转换器”</string>
+    <string name="no_mail_app">未找到可发送邮件的应用</string>
+    <string name="mail_chooser">选择邮件应用</string>
+
+    <string name="videos_header_title">演示视频</string>
+    <string name="videos_header_summary">点击下方平台前往观看</string>
+    <string name="bilibili">哔哩哔哩</string>
+    <string name="weibo">微博</string>
+    <string name="douyin">抖音</string>
+    <string name="rednote">小红书</string>
+    <string name="wechat_video">微信视频号</string>
+
+    <string name="shizuku_not_installed_title">未安装Shizuku</string>
+    <string name="shizuku_not_installed_message">由于Android11及以上的系统限制，第三方APP无法直接读取其它应用的内部文件，需要下载并启用Shizuku服务以跳过此限制，用于读取已下载的QQ浏览器小说文件。</string>
+    <string name="download_shizuku">前往下载Shizuku</string>
+    <string name="shizuku_connecting">正在调用Shizuku服务...</string>
+    <string name="shizuku_not_running_title">Shizuku服务未启动</string>
+    <string name="shizuku_not_running_message">请阅读使用说明并启动Shizuku服务</string>
+    <string name="open_shizuku">打开Shizuku</string>
+    <string name="go_instructions">前往使用说明</string>
+    <string name="shizuku_permission_message">请允许本应用获取Shizuku服务，用于读取和保存QQ浏览器小说文件</string>
+    <string name="shizuku_app_not_found">未找到Shizuku应用，请手动打开</string>
+    <string name="shizuku_permission_denied">Shizuku服务获取失败</string>
+    <string name="api_google_title">Google Analytics（谷歌分析）</string>
+    <string name="api_google_body">第三方名称：Firebase Analytics SDK\n使用目的：采集应用事件及会话情况\n收集方式：SDK自行采集\n收集的信息：https://policies.google.com/privacy?hl=zh-CN#infocollect\n官网链接：https://www.google.com/analytics/?hl=zh-CN\n隐私权政策：https://www.google.com/policies/privacy/?hl=zh-CN</string>
+</resources>

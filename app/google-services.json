@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "900299937227",
+    "project_id": "qq-x59v",
+    "storage_bucket": "qq-x59v.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:900299937227:android:b66009402ee072f29f524e",
+        "android_client_info": {
+          "package_name": "com.QQBrowsernovelswitch"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJbf1R1nYrgUxCEdWCoWHsBWccnKx8XNk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

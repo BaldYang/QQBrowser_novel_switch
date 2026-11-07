@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingStart="12dp"
+    android:paddingTop="8dp"
+    android:paddingEnd="12dp"
+    android:paddingBottom="8dp">
+
+    <TextView
+        android:id="@+id/novelIndex"
+        android:layout_width="48dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/novelName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="2"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/novelStatus"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.4"
+        android:gravity="center"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/novelChapters"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.2"
+        android:gravity="center"
+        android:textSize="13sp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/convertButton"
+        android:layout_width="84dp"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:backgroundTint="@color/blue"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:minWidth="0dp"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
+        android:singleLine="true"
+        android:text="@string/convert"
+        android:textColor="@color/blue_night"
+        android:textSize="14sp" />
+</LinearLayout>

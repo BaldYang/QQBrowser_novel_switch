@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_background"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:ignore="Orientation">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/API"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:gravity="center_vertical"
+            android:text="@string/action_third_party"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText,VisualLintSystemUi" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+            <TextView
+                android:id="@+id/title1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/api_google_title"
+                android:textIsSelectable="true"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="10dp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/api1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/api_google_body"
+                android:textIsSelectable="true"
+                android:textSize="15sp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="10dp"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
